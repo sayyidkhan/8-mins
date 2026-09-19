@@ -1,0 +1,38 @@
+.scene-sketch {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  border-radius: inherit;
+  pointer-events: none;
+  touch-action: auto;
+}
+
+.scene-sketch[aria-disabled='false'] {
+  pointer-events: auto;
+  touch-action: none;
+  cursor: crosshair;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.scene-sketch path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.scene-sketch__halo {
+  stroke: #fffdf5;
+  stroke-width: 12;
+}
+
+.scene-sketch__ink {
+  stroke: #171d1b;
+}

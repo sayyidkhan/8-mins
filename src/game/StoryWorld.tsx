@@ -122,7 +122,7 @@ function ToolGlyph({ object }: { object: string }) {
     case 'speech': return <><path d="M-32-24Q0-39 31-24 44-5 30 14 15 27-7 20L-28 34l4-22Q-42-2-32-24Z" /><path d="M-17-8h34M-17 3H7" /></>;
     case 'stop': return <><path d="m-14-34 29 0 20 20v29L15 35h-29l-21-20v-29Z" /><path d="M-10 14-17 0q-2-6 3-5l7 5v-17q0-6 5-3v13-18q4-6 7 0v18-15q5-4 7 2v16-10q6-5 6 3v17q-2 13-13 13Z" strokeWidth="3" /></>;
     case 'headphones': return <><path d="M-30 8v-12a30 30 0 0 1 60 0V8M-23-8a23 23 0 0 1 46 0" /><rect x="-33" y="2" width="14" height="28" rx="6" /><rect x="19" y="2" width="14" height="28" rx="6" /></>;
-    case 'signal': return <><path d="M-5 34V-4M-18 12-5-4 8 12" /><circle cx="-5" cy="-19" r="9" /><path d="M14-26q12 9 0 20M23-35q22 18 0 38M-25-29l-8-9M-28-16h-13" /></>;
+    case 'signal': return <><path d="M-34-9h19L24-28v56L-15 9h-19ZM-15 10l8 22H5L0 13M34-12l8-4M35 0h12M34 12l8 4" /></>;
     case 'bridge': return <><path d="M-37 29v-49M37 29v-49M-37-16Q0 23 37-16M-37 16H37M-24-4v20M-8 4v12M8 4v12M24-4v20M-43 29h13M30 29h13" /></>;
     default: return null;
   }

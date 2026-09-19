@@ -790,6 +790,44 @@ button:disabled {
 }
 
 .drawing-title h1 {
+  max-width: calc(100% - 95px);
+}
+
+.encounter-cue {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 2px solid #aab58d;
+  background: #e9eddf7a;
+  border-radius: 0 6px 6px 0;
+}
+
+.encounter-cue > p {
+  font: italic 17px/1.4 'Fraunces', Georgia, serif;
+  color: #566648;
+}
+
+.encounter-cue details {
+  margin-top: 8px;
+  color: #68715f;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.encounter-cue summary {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.encounter-cue summary:focus-visible {
+  outline: 3px solid #ac7333;
+  outline-offset: 3px;
+}
+
+.encounter-cue details p {
+  margin-top: 8px;
+}
+
+.drawing-title h1 {
   font-size: 38px;
   margin-bottom: 0;
 }
@@ -1989,6 +2027,126 @@ button:disabled {
   .desktop-break {
     display: none;
   }
+}
+
+.play-layout.is-drawing {
+  grid-template-columns: 1.6fr 1fr;
+  align-items: start;
+}
+
+.is-drawing .scene-art .world-scene { aspect-ratio: 1000 / 660; }
+.is-drawing .scene-art .world-art { width: 100%; margin-left: 0; }
+
+.scene-draw-hint {
+  position: absolute;
+  inset: 40% 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff9df;
+  text-shadow: 0 2px 5px #1f392b;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.scene-draw-hint span {
+  padding: 9px 14px;
+  background: #294535b8;
+  border: 1px solid #f3edce44;
+  border-radius: 5px;
+  font: italic 16px 'Fraunces', Georgia, serif;
+}
+
+.sketch-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0 0;
+}
+
+.sketch-toolbar > div { display: flex; gap: 7px; }
+.sketch-toolbar > span { font-size: 9px; color: #7c896b; }
+.sketch-toolbar .button { min-height: 40px; padding: 10px 16px; font-size: 10px; }
+
+.object-hints {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  gap: 8px;
+}
+
+.object-hints li {
+  border: 1px solid #d8dfc9;
+  background: #eef0e4;
+  border-radius: 6px;
+  padding: 12px 7px;
+  text-align: center;
+  color: #687e55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.object-hints strong { font: 400 15px 'Fraunces', Georgia, serif; }
+.object-hints li > span { font-size: 8px; line-height: 1.5; color: #7a876d; }
+.ai-explanation { display: flex; gap: 7px; font-size: 9px; color: #7c886c; line-height: 1.8; }
+.ai-explanation svg { flex-shrink: 0; margin-top: 2px; }
+.keyboard-alternative { font-size: 10px; line-height: 1.7; margin-top: 18px; color: #718260; }
+.keyboard-alternative summary { cursor: pointer; }
+.keyboard-alternative p { margin: 10px 0; }
+.keyboard-alternative .button + .button { margin-top: 7px; }
+
+.recognition-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #203f326b;
+  color: #fff6da;
+  text-align: center;
+  padding: 20px;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.recognition-overlay > span { font: italic 25px 'Fraunces', Georgia, serif; }
+.recognition-overlay small { font-size: 9px; }
+.recognition-page .object-hints { margin-top: 26px; }
+.loading-spin { animation: recognition-spin 1.5s linear infinite; }
+@keyframes recognition-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+  .play-layout.is-drawing { display: flex; flex-direction: column; gap: 17px; }
+  .play-layout.is-drawing .scene-column { display: flex; flex-direction: column; width: 100%; order: 2; }
+  .is-drawing .sketch-toolbar { order: -1; padding: 0 0 10px; }
+  .is-drawing .story-panel { max-width: none; order: 1; }
+  .is-drawing .panel-topline { margin-bottom: 12px; padding-bottom: 10px; }
+  .is-drawing .drawing-title h1 { font-size: 29px; }
+  .is-drawing .countdown { width: 59px; height: 59px; }
+  .is-drawing .countdown strong { font-size: 24px; }
+  .is-drawing .encounter-cue { margin-top: 10px; padding: 9px 12px; }
+  .is-drawing .encounter-cue > p { font-size: 15px; }
+  .is-drawing .draw-instruction { margin: 10px 0 0; }
+  .object-hints { margin: 8px 0; }
+  .object-hints li { padding: 8px 5px; gap: 3px; }
+  .object-hints svg { width: 37px; height: 37px; }
+  .object-hints strong { font-size: 13px; }
+  .is-drawing .drawing-pause { margin-top: 6px; }
+  .is-drawing .scene-caption { display: none; }
+  .sketch-toolbar > span { display: none; }
+}
+
+@media (min-width: 621px) and (max-width: 900px) {
+  .is-drawing .scene-art { width: 100%; max-width: 500px; align-self: center; }
 }
 
 @media (prefers-reduced-motion:reduce) {

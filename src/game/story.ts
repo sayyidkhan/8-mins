@@ -31,12 +31,12 @@ export const chapters: StoryChapter[] = [
     location: 'Outside the neighbourhood court',
     eyebrow: '01 / A way out',
     narration:
-      'The court lights flicker on. Bob tucks his sketchbook under his arm, ready for home. A group calls him back and offers him a substance. He wants to leave, but being the first to say no feels difficult.',
+      'The court lights flicker on. Bob tucks his sketchbook under his arm, ready for home. A group calls him back and offers him drugs. He wants to leave, but being the first to say no feels difficult.',
     dialogue: {
       speaker: 'Someone in the group',
       text: 'Stay a bit. Everyone else has tried it. Want some?',
     },
-    instruction: 'Choose an exit, an ally, or a clear no. Trace the object to help Bob act.',
+    instruction: 'Freely sketch one of three objects over the scene image: a door, phone, or speech bubble. You have 8 seconds; AI identifies which choice you drew.',
     choices: [
       {
         id: 'invitation-leave',
@@ -83,23 +83,23 @@ export const chapters: StoryChapter[] = [
     location: 'Beside the bus stop',
     eyebrow: '02 / A claim is not proof',
     narration:
-      'Near the bus stop, an acquaintance holds out something Bob cannot identify. Their voice sounds certain. Bob looks down at his sketchbook. A confident promise still leaves him with a question: what does he actually know?',
+      'Near the bus stop, an acquaintance offers Bob a drug he cannot identify. Their voice sounds certain. Bob looks down at his sketchbook. A confident promise still leaves him with a question: what does he actually know?',
     dialogue: {
       speaker: 'An acquaintance',
       text: 'It’s harmless. Trust me, you don’t need to worry.',
     },
-    instruction: 'Draw a boundary or a way to ask for support. Do not accept the unknown substance.',
+    instruction: 'Freely sketch one of three objects over the scene image: a stop sign, phone, or door. You have 8 seconds; AI identifies your choice. Leave the unknown drug behind.',
     choices: [
       {
         id: 'claim-decline',
         object: 'stop',
         label: 'Decline the offer',
-        description: 'Do not take an unknown substance on someone’s assurance.',
+        description: 'Do not take an unknown drug on someone’s assurance.',
         outcomeTitle: 'A line he can hold',
         outcome:
           'A stop sign rises from the page. “No thanks. I don’t know what that is,” Bob says. He does not accept it and moves away. He can leave the uncertainty unresolved rather than test the claim.',
-        takeaway: 'Confidence, popularity, and appearance do not establish safety. Avoid taking unknown substances.',
-        memory: 'You drew a stop sign. Bob declined the unknown substance and moved away.',
+        takeaway: 'Confidence, popularity, and appearance do not establish safety. Avoid taking unknown drugs.',
+        memory: 'You drew a stop sign. Bob declined the unknown drug and moved away.',
       },
       {
         id: 'claim-advice',
@@ -108,9 +108,20 @@ export const chapters: StoryChapter[] = [
         description: 'Step away and contact someone trusted for support and reliable information.',
         outcomeTitle: 'Room to check',
         outcome:
-          'Bob leaves the offer behind and calls his aunt. She cannot identify the substance either. She listens, helps him find official support information, and reminds him he does not need to accept it while seeking advice.',
+          'Bob leaves the offer behind and calls his aunt. She cannot identify the drug either. She listens, helps him find official support information, and reminds him he does not need to accept it while seeking advice.',
         takeaway: 'Step away from the offer. Seek trusted support and official information rather than relying on someone’s reassurance.',
         memory: 'You drew a phone. Bob stepped away and asked his aunt for support and reliable information.',
+      },
+      {
+        id: 'claim-leave',
+        object: 'door',
+        label: 'Leave the offer behind',
+        description: 'Decline and move to a nearby lit, staffed shop.',
+        outcomeTitle: 'Away from the offer',
+        outcome:
+          'A doorway opens towards the nearby shop. Bob leaves without taking the drug and goes inside, where staff and other customers are present. He gives himself distance from the offer without staying to debate the claim.',
+        takeaway: 'You can leave an unknown drug behind without identifying it or proving someone wrong. Move towards a lit, staffed place.',
+        memory: 'You drew a door. Bob left the unknown drug behind and went into a lit, staffed shop.',
       },
     ],
     detour: {
@@ -124,12 +135,12 @@ export const chapters: StoryChapter[] = [
     location: 'At the edge of the neighbourhood park',
     eyebrow: '03 / Make room to breathe',
     narration:
-      'The evening feels heavier now. Bob sits near the park, replaying what happened and wondering whether anyone understands. Someone nearby offers him a substance to forget it all. His feelings need care, and he can choose another response.',
+      'The evening feels heavier now. Bob sits near the park, replaying what happened and wondering whether anyone understands. Someone nearby offers him drugs to forget it all. His feelings need care, and he can choose another response.',
     dialogue: {
       speaker: 'Someone nearby',
       text: 'Rough evening? Want something to forget about it?',
     },
-    instruction: 'Help Bob decline and find a calmer moment or someone to talk to.',
+    instruction: 'Freely sketch one of three objects over the scene image: headphones, a phone, or a door. You have 8 seconds; AI identifies your choice. Help Bob decline and find support.',
     choices: [
       {
         id: 'distress-pause',
@@ -145,13 +156,24 @@ export const chapters: StoryChapter[] = [
       {
         id: 'distress-connect',
         object: 'phone',
-        label: 'Tell someone how you feel',
+        label: 'Call someone trusted',
         description: 'Decline and ask someone trusted to listen.',
         outcomeTitle: 'Someone listens',
         outcome:
           'Bob declines and steps into the community centre to call his older sister. “I’m upset. Can you listen for a bit?” She stays on the line. Talking does not solve everything, but he no longer carries the moment alone.',
         takeaway: 'You can ask for company without having all the words. Persistent distress deserves support from a trusted adult or counsellor.',
         memory: 'You drew a phone. Bob told his sister he was upset and asked her to listen.',
+      },
+      {
+        id: 'distress-support',
+        object: 'door',
+        label: 'Ask staff for support',
+        description: 'Decline and enter the staffed community centre to ask for help.',
+        outcomeTitle: 'Support through the doorway',
+        outcome:
+          'Bob declines the drugs and walks through the community centre doors. At the staffed desk, he says, “I’m having a difficult evening. Could someone help?” A staff member sits with him and helps him contact a trusted adult for support.',
+        takeaway: 'You can ask for help in person. A staffed community space can help you connect with a trusted adult or counsellor.',
+        memory: 'You drew a door. Bob entered the staffed community centre and asked for support in person.',
       },
     ],
     detour: {
@@ -170,7 +192,7 @@ export const chapters: StoryChapter[] = [
       speaker: 'Bob’s friend',
       text: 'I feel really dizzy. I can’t think properly. Please stay.',
     },
-    instruction: 'In a real emergency, call 995 now. Stay with your friend and follow the operator. Never wait for a drawing.',
+    instruction: 'In a real emergency, call 995 now, stay with your friend, and follow the operator. Never wait for a drawing. In the game, freely sketch one of three objects over the scene image: a phone, signal, or speech bubble. You have 8 seconds; AI identifies your choice.',
     emergency: true,
     choices: [
       {
@@ -187,13 +209,24 @@ export const chapters: StoryChapter[] = [
       {
         id: 'emergency-alert',
         object: 'signal',
-        label: 'Ask an adult to call 995',
+        label: 'Signal an adult',
         description: 'Alert a nearby adult immediately and stay with your friend.',
         outcomeTitle: 'Another pair of hands',
         outcome:
           'Bob signals a nearby adult: “Call 995 now. My friend is seriously unwell.” The adult calls immediately on speaker. Bob stays with his friend, gives their location, and follows the operator’s instructions with the adult.',
         takeaway: 'Ask someone nearby to call 995 immediately. Stay with your friend and follow the operator; do not wait for symptoms to pass.',
         memory: 'You drew a signal. Bob got an adult to call 995 immediately, stayed with his friend, and followed the operator.',
+      },
+      {
+        id: 'emergency-shout',
+        object: 'speech',
+        label: 'Call out for help',
+        description: 'Call out to a nearby adult: “Call 995 now.” Stay with your friend.',
+        outcomeTitle: 'An urgent call carries',
+        outcome:
+          'A nearby adult is facing away. Bob calls out clearly: “Call 995 now. My friend is seriously unwell.” The adult turns and immediately calls on speaker. Bob stays beside his friend, gives their location, and follows the operator’s instructions with the adult.',
+        takeaway: 'Call out a specific request for emergency help: “Call 995 now.” Stay with the person and follow the operator’s instructions.',
+        memory: 'You drew a speech bubble. Bob called out to an adult to call 995 now, stayed with his friend, and followed the operator.',
       },
     ],
     detour: {
@@ -212,7 +245,7 @@ export const chapters: StoryChapter[] = [
       speaker: 'Bob',
       text: 'What if they judge me? I could use someone beside me right now.',
     },
-    instruction: 'Draw a bridge to someone trusted. Ask for help getting home and talking things through.',
+    instruction: 'Freely sketch one of three objects over the scene image: a bridge, phone, or speech bubble. You have 8 seconds; AI identifies your choice. Connect with someone trusted for help home.',
     choices: [
       {
         id: 'home-connect',
@@ -224,6 +257,28 @@ export const chapters: StoryChapter[] = [
           'The bridge becomes a path forward. Bob calls his aunt: “Could you meet me? I need to talk.” She meets him and walks home with him. Over a warm drink, he begins telling her about the evening.',
         takeaway: 'Asking for help is a useful action. A parent, caregiver, counsellor, or another trusted adult can offer support.',
         memory: 'You drew a bridge. Bob asked his aunt to meet him, walked home with her, and shared what happened.',
+      },
+      {
+        id: 'home-call',
+        object: 'phone',
+        label: 'Call for company home',
+        description: 'Call a trusted adult from a lit, staffed place and ask them to accompany you home.',
+        outcomeTitle: 'Somewhere to wait',
+        outcome:
+          'Bob steps into a lit, staffed shop and calls his dad: “I’m at the shop. Could you come and walk home with me?” He waits inside until his dad arrives. With someone beside him on the way home, he begins to explain why tonight felt difficult.',
+        takeaway: 'Share your location with a trusted adult and ask for company home. A lit, staffed place gives you somewhere to wait for them.',
+        memory: 'You drew a phone. Bob called his dad from a lit, staffed shop, waited inside, and walked home with him.',
+      },
+      {
+        id: 'home-talk',
+        object: 'speech',
+        label: 'Ask for help in person',
+        description: 'Speak directly to a trusted adult for help getting home and talking things through.',
+        outcomeTitle: 'A conversation begins',
+        outcome:
+          'Bob spots a trusted adult he knows from the community centre by its entrance. He walks over and says, “Could you help me get home? I need someone to talk to.” They sit inside while arranging for his aunt to accompany him home, and Bob starts sharing what happened.',
+        takeaway: 'You can ask a trusted adult directly for practical help and a listening ear. You do not need to explain everything at once.',
+        memory: 'You drew a speech bubble. Bob spoke to a trusted adult in person, began talking, and arranged help getting home.',
       },
     ],
     detour: {
