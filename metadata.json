@@ -1,6 +1,6 @@
 {
-  "name": "The Next 8 Seconds",
-  "description": "Draw your way home: an interactive storybook with eight-second tracing challenges about refusing drugs and seeking support.",
+  "name": "The Next 8 Seconds: Draw Your Way Home",
+  "description": "An illustrated storybook adventure where you sketch solutions to help Bob navigate peer pressure and find his safe way home.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
