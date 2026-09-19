@@ -14,7 +14,7 @@ Build for the [hackathon brief](./hackathon-problem-statement.md) and [judging c
 
 Bob is heading home after an evening out. His sketchbook has an unusual power: whatever he finishes drawing becomes real. Along the way, he meets situations involving peer pressure, uncertain claims, distress, and asking for help. Players help him reach safety by selecting and tracing objects that become useful actions in the story.
 
-The creative inspiration is *The Tale We Drew*: “The thing I drew actually helped.” See [inspiration notes](./inpiration/the-tale-we-drew-linkedin.md) and the screenshots and gameplay video in `research/`. These are references, not production game assets.
+The creative inspiration is *The Tale We Drew*: “The thing I drew actually helped.” See [inspiration notes](./inspiration/the-tale-we-drew-linkedin.md) and the screenshots and gameplay video in `research/`. These are references, not production game assets.
 
 ## Core decisions
 
