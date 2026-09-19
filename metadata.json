@@ -1,0 +1,6 @@
+{
+  "name": "The Next 8 Minutes",
+  "description": "An interactive story about helping a friend take the next safe step.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
